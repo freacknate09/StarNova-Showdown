@@ -5638,4 +5638,71 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -4,
 	},
+	absorption: {
+		onStart(pokemon) {
+			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+		},
+		onWeatherChange(pokemon) {
+			// Protosynthesis is not affected by Utility Umbrella
+			if (this.field.isWeather('raindance')) {
+				pokemon.addVolatile('absorption');
+			} else if (!pokemon.volatiles['absorption']?.fromBooster && this.field.weather !== 'sunnyday') {
+				// Protosynthesis will not deactivite if Sun is suppressed, hence the direct ID check (isWeather respects supression)
+				pokemon.removeVolatile('absorption');
+			}
+		},
+		onEnd(pokemon) {
+			delete pokemon.volatiles['absorption'];
+			this.add('-end', pokemon, 'Absorption', '[silent]');
+		},
+		condition: {
+			noCopy: true,
+			onStart(pokemon, source, effect) {
+				if (effect?.name === 'Booster Energy') {
+					this.effectState.fromBooster = true;
+					this.add('-activate', pokemon, 'ability: Absorption', '[fromitem]');
+				} else {
+					this.add('-activate', pokemon, 'ability: Absorption');
+				}
+				this.effectState.bestStat = pokemon.getBestStat(false, true);
+				this.add('-start', pokemon, 'absorption' + this.effectState.bestStat);
+			},
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, pokemon) {
+				if (this.effectState.bestStat !== 'atk' || pokemon.ignoringAbility()) return;
+				this.debug('Absorption atk boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifyDefPriority: 6,
+			onModifyDef(def, pokemon) {
+				if (this.effectState.bestStat !== 'def' || pokemon.ignoringAbility()) return;
+				this.debug('Absorption def boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon) {
+				if (this.effectState.bestStat !== 'spa' || pokemon.ignoringAbility()) return;
+				this.debug('Absorption spa boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpDPriority: 6,
+			onModifySpD(spd, pokemon) {
+				if (this.effectState.bestStat !== 'spd' || pokemon.ignoringAbility()) return;
+				this.debug('Absorption spd boost');
+				return this.chainModify([5325, 4096]);
+			},
+			onModifySpe(spe, pokemon) {
+				if (this.effectState.bestStat !== 'spe' || pokemon.ignoringAbility()) return;
+				this.debug('Absorption spe boost');
+				return this.chainModify(1.5);
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Absorption');
+			},
+		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, notransform: 1},
+		name: "Protosynthesis",
+		rating: 3,
+		num: 281,
+	},
 };
