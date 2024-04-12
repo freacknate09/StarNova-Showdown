@@ -4364,7 +4364,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Magcargo",
 		types: ["Fire", "Rock"],
 		baseStats: {hp: 80, atk: 50, def: 140, spa: 110, spd: 110, spe: 30},
-		abilities: {0: "Magma Armor", 1: "Flame Body", H: "Weak Armor"},
+		abilities: {0: "Solid Rock", 1: "Flame Body", H: "Weak Armor"},
 		heightm: 0.8,
 		weightkg: 55,
 		color: "Red",
