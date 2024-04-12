@@ -13371,7 +13371,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 748,
 		name: "Toxapex",
 		types: ["Poison", "Water"],
-		baseStats: {hp: 80, atk: 63, def: 172, spa: 53, spd: 162, spe: 35},
+		baseStats: {hp: 70, atk: 63, def: 152, spa: 53, spd: 142, spe: 35},
 		abilities: {0: "Merciless", 1: "Limber", H: "Regenerator"},
 		heightm: 0.7,
 		weightkg: 14.5,
