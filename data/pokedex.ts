@@ -3700,7 +3700,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 178,
 		name: "Xatu",
 		types: ["Psychic", "Flying"],
-		baseStats: {hp: 65, atk: 75, def: 70, spa: 95, spd: 70, spe: 95},
+		baseStats: {hp: 85, atk: 95, def: 70, spa: 115, spd: 70, spe: 100},
 		abilities: {0: "Synchronize", 1: "Early Bird", H: "Magic Bounce"},
 		heightm: 1.5,
 		weightkg: 15,
