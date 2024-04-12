@@ -9715,7 +9715,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 541,
 		name: "Swadloon",
 		types: ["Bug", "Grass"],
-		baseStats: {hp: 55, atk: 63, def: 90, spa: 50, spd: 80, spe: 42},
+		baseStats: {hp: 65, atk: 73, def: 100, spa: 50, spd: 90, spe: 52},
 		abilities: {0: "Leaf Guard", 1: "Chlorophyll", H: "Overcoat"},
 		heightm: 0.5,
 		weightkg: 7.3,
