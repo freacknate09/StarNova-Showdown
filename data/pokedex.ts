@@ -516,7 +516,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 24,
 		name: "Arbok",
 		types: ["Poison", "Dark"],
-		baseStats: {hp: 80, atk: 95, def: 79, spa: 65, spd: 99, spe: 107},
+		baseStats: {hp: 80, atk: 95, def: 79, spa: 65, spd: 99, spe: 80},
 		abilities: {0: "Intimidate", 1: "Shed Skin", H: "Unnerve"},
 		heightm: 3.5,
 		weightkg: 65,
