@@ -9451,7 +9451,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	hyperfang: {
 		num: 158,
 		accuracy: 100,
-		basePower: 80,
+		basePower: 90,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Hyper Fang",
