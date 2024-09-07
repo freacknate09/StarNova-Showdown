@@ -3,6 +3,15 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "No Ability",
 		shortDesc: "Does nothing.",
 	},
+	absorption: {
+		name: "Absorption",
+		desc: "If Rain is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Rain, a held Booster Energy will not activate and the effect ends when Rain is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
+		shortDesc: "Electric Terrain active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
+
+		activate: "  The Rain activated [POKEMON]'s Quark Drive!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate its Quark Drive!",
+		start: "  [POKEMON]'s [STAT] was heightened!",
+		end: "  The effects of [POKEMON]'s Quark Drive wore off!",
 	adaptability: {
 		name: "Adaptability",
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
@@ -1695,6 +1704,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			desc: "If Hail is active, the accuracy of moves used against this Pokemon is multiplied by 0.8. This Pokemon takes no damage from Hail.",
 			shortDesc: "If Hail is active, this Pokemon's evasiveness is 1.25x; immunity to Hail.",
 		},
+	},
+	snowdrift: {
+		name: "Snow Drift",
+		desc: "If Snow is active or this Pokemon uses a held Booster Energy, this Pokemon's highest stat is multiplied by 1.3, or by 1.5 if the highest stat is Speed. Stat stage changes are considered at the time this Ability activates. If multiple stats are tied, Attack, Defense, Special Attack, Special Defense, and Speed are prioritized in that order. If this effect was started by Snow, a held Booster Energy will not activate and the effect ends when Snow is no longer active. If this effect was started by a held Booster Energy, it ends when this Pokemon is no longer active.",
+		shortDesc: "Snow active or Booster Energy used: highest stat is 1.3x, or 1.5x if Speed.",
+
+		activate: "  The Snow activated [POKEMON]'s Snow Drift!",
+		activateFromItem: "  [POKEMON] used its Booster Energy to activate its Quark Drive!",
+		start: "  [POKEMON]'s [STAT] was heightened!",
+		end: "  The effects of [POKEMON]'s Quark Drive wore off!",
 	},
 	snowwarning: {
 		name: "Snow Warning",
