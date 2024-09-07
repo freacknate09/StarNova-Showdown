@@ -1369,7 +1369,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: 55,
 		name: "Golduck",
 		types: ["Water", "Psychic"],
-		baseStats: {hp: 80, atk: 82, def: 88, spa: 105, spd: 90, spe: 85},
+		baseStats: {hp: 80, atk: 82, def: 88, spa: 95, spd: 90, spe: 85},
 		abilities: {0: "Damp", 1: "Cloud Nine", H: "Swift Swim"},
 		heightm: 1.7,
 		weightkg: 76.6,
